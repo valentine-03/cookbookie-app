@@ -78,7 +78,7 @@ export default function Dashboard() {
                     <img src={style.image} alt={`${category} category illustration`} />
                   </div>
                   <span>{category}</span>
-                  <Icon name="arrow_outward" className="category-arrow" />
+                  <Icon name="north_east" className="category-arrow" />
                 </Link>
               )
             })}
