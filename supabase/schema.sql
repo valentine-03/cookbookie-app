@@ -1,5 +1,4 @@
--- CookBookie: recipes table + Row Level Security
--- Run this in your Supabase project's SQL Editor (Dashboard -> SQL Editor -> New query).
+-- In Supabase project's SQL Editor: Dashboard > SQL Editor > New query.
 
 create table if not exists public.recipes (
   id uuid primary key default gen_random_uuid(),
@@ -17,12 +16,10 @@ create table if not exists public.recipes (
   created_at timestamptz not null default now()
 );
 
--- Row Level Security: without this, ANY logged-in user could read/edit
--- everyone else's recipes through the auto-generated API. This is what
--- ties data to a person.
+-- This is what ties data to a person.
 alter table public.recipes enable row level security;
 
--- Each policy below says: you may only do X to rows where user_id
+-- What each policy below says: you may only do X to rows where "user_id"
 -- matches your own auth id (auth.uid() is supplied automatically by
 -- Supabase based on the logged-in user's JWT).
 

@@ -1,7 +1,7 @@
 import { Navigate } from 'react-router-dom'
 import { useAuth } from '../context/AuthContext'
 
-// Wrap any page in <ProtectedRoute> to require login first.
+// Wrap any page to require login first.
 export default function ProtectedRoute({ children }) {
   const { user, loading } = useAuth()
 

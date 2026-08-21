@@ -11,7 +11,18 @@ export default function AddRecipe() {
   const { user } = useAuth()
   const { addRecipe } = useRecipes()
   const navigate = useNavigate()
-  const [form, setForm] = useState({ title: '', category: 'Lunch', prep_time: '', cook_time: '', ingredients: '', instructions: '', calories: '', protein: '', carbs: '', fat: '' })
+  const [form, setForm] = useState({
+    title: '',
+    category: 'Lunch',
+    prep_time: '',
+    cook_time: '',
+    ingredients: '',
+    instructions: '',
+    calories: '',
+    protein: '',
+    carbs: '',
+    fat: '',
+  })
   const [error, setError] = useState('')
   const [busy, setBusy] = useState(false)
   const [photoFile, setPhotoFile] = useState(null)

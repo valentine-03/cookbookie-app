@@ -3,8 +3,6 @@ import { supabase } from '../supabaseClient'
 import { useAuth } from '../context/AuthContext'
 
 // This hook is the "API layer" for the whole app. Every recipe CRUD
-// operation goes through here, calling Supabase's auto-generated REST
-// API under the hood via the supabase-js client.
 export function useRecipes() {
   const { user } = useAuth()
   const [recipes, setRecipes] = useState([])

@@ -1,7 +1,6 @@
 import { createClient } from '@supabase/supabase-js'
 
-// These come from your .env file (see .env.example).
-// VITE_ prefix is required for Vite to expose them to the browser.
+// These come from .env file
 const supabaseUrl = import.meta.env.VITE_SUPABASE_URL
 const supabaseAnonKey = import.meta.env.VITE_SUPABASE_ANON_KEY
 
